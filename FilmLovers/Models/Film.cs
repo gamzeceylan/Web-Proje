@@ -14,6 +14,7 @@ namespace FilmLovers.Models
         public int? Uzunluk { get; set; }
         public double? IMDB_Puan { get; set; }
         public string Oyuncular { get; set; }
+        public string Afis { get; set; }
 
         [DataType(DataType.Date)]
         public DateTime GosterimBaslangıc { get; set; }

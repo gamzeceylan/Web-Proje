@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cceyl\\source\\repos\\FilmLovers\\FilmLovers\\FilmLovers.csproj": {}
+    "C:\\Users\\cceyl\\Documents\\GitHub\\Web-Proje\\FilmLovers\\FilmLovers.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cceyl\\source\\repos\\FilmLovers\\FilmLovers\\FilmLovers.csproj": {
+    "C:\\Users\\cceyl\\Documents\\GitHub\\Web-Proje\\FilmLovers\\FilmLovers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cceyl\\source\\repos\\FilmLovers\\FilmLovers\\FilmLovers.csproj",
+        "projectUniqueName": "C:\\Users\\cceyl\\Documents\\GitHub\\Web-Proje\\FilmLovers\\FilmLovers.csproj",
         "projectName": "FilmLovers",
-        "projectPath": "C:\\Users\\cceyl\\source\\repos\\FilmLovers\\FilmLovers\\FilmLovers.csproj",
+        "projectPath": "C:\\Users\\cceyl\\Documents\\GitHub\\Web-Proje\\FilmLovers\\FilmLovers.csproj",
         "packagesPath": "C:\\Users\\cceyl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cceyl\\source\\repos\\FilmLovers\\FilmLovers\\obj\\",
+        "outputPath": "C:\\Users\\cceyl\\Documents\\GitHub\\Web-Proje\\FilmLovers\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\cceyl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,11 +54,17 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.8, )"
+              "version": "[5.0.12, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.8, )"
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
             }
           },
           "imports": [

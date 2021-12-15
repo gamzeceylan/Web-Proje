@@ -16,7 +16,7 @@ namespace FilmLovers.Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.8")
+                .HasAnnotation("ProductVersion", "5.0.12")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("FilmLovers.Models.Dil", b =>
@@ -53,6 +53,9 @@ namespace FilmLovers.Data.Migrations
                     b.Property<string>("Oyuncular")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Resim")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("YazarId")
                         .HasColumnType("int");
 
@@ -77,6 +80,9 @@ namespace FilmLovers.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Afis")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("DilId")
                         .HasColumnType("int");
@@ -133,6 +139,9 @@ namespace FilmLovers.Data.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Baslik")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Resim")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("YazarId")

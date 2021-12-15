@@ -1,0 +1,104 @@
+﻿@model IEnumerable<FilmLovers.Models.Film>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FilmAd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Yil)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Afis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Uzunluk)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IMDB_Puan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Oyuncular)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GosterimBaslangıc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GosterimBitis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Konu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YazarPuan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kategori)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dil)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Yazar)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmAd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Yil)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Uzunluk)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IMDB_Puan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Oyuncular)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GosterimBaslangıc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GosterimBitis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Konu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YazarPuan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kategori.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dil.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Yazar.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
