@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - CineDiary</title>
+    <title>@ViewData["Title"] - FilmLoverss</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="~/css/styles.css" rel="stylesheet" />
@@ -14,39 +14,49 @@
         <div class="bg-dark py-5">
             <div class="container">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Shop in style</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
+                    <h1 class="display-4 fw-bolder ">
+                        <span class="text-danger">Film</span><span class="text-primary">Loverss</span>
+                    </h1>
+
                 </div>
             </div>
         </div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!">Start Bootstrap</a>
+                <!--       <a class="navbar-brand" href="#!">Start Bootstrap</a>
+     -->
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+
+                        <li class="navbar-brand dropdown">
+                            <a class="nav-link active dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Filmler</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">All Products</a></li>
+                                <li><a class="dropdown-item" href="#!">Vizyondakiler</a></li>
                                 <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                                <li><a class="dropdown-item" href="#!">Film Eleştrileri</a></li>
                             </ul>
                         </li>
 
+
+                        <li class="navbar-brand"><a class="nav-link active" href="#!">Diziler</a></li>
+
+                        <li class="navbar-brand"><a class="nav-link active" href="#!">Haberler</a></li>
+                        <li class="navbar-brand"><a class="nav-link active" href="#!">Röportajlar</a></li>
+
                         <!--Admin-->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin</a>
+                        <li class="navbar-brand dropdown">
+                            <a class="nav-link active dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Yazars" asp-action="Index">Yazar</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Kategoris" asp-action="Index">Kategori</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Dils" asp-action="Index">Dil</a></li>
                                 <li><a class="dropdown-item" asp-area="" asp-controller="Films" asp-action="Index">Film</a></li>
                                 <li><a class="dropdown-item" asp-area="" asp-controller="Dizis" asp-action="Index">Dizi</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Kategoris" asp-action="Index">Kategori</a></li>
                                 <li><a class="dropdown-item" asp-area="" asp-controller="Habers" asp-action="Index">Haber</a></li>
                                 <li><a class="dropdown-item" asp-area="" asp-controller="Roportajs" asp-action="Index">Ropörtaj</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Yazars" asp-action="Index">Yazar</a></li>
+
 
                             </ul>
                         </li>
@@ -56,8 +66,8 @@
                     <form class="d-flex">
                         <button class="btn btn-outline-dark" type="submit">
                             <i class="bi-cart-fill me-1"></i>
-                            Cart
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                            Üye Ol
+                           
                         </button>
                     </form>
                 </div>
@@ -81,5 +91,12 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+
+    <!-- Footer -->
+   
+    <!-- Footer -->
+
+
 </body>
 </html>

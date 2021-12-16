@@ -24,5 +24,6 @@ namespace FilmLovers.Data
         public DbSet<Roportaj> Roportaj { get; set; }
 
         public DbSet<Yazar> Yazar { get; set; }
+    
     }
 }

@@ -13,43 +13,56 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.FilmAd)
+                Film Adı
+             @*   @Html.DisplayNameFor(model => model.FilmAd) *@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Yil)
+                Yayın Tarihi
+                @*  @Html.DisplayNameFor(model => model.Yil) *@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Afis)
+                Film Afişi
+                @*  @Html.DisplayNameFor(model => model.Afis) *@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Uzunluk)
+                Film Süresi
+                @* @Html.DisplayNameFor(model => model.Uzunluk) *@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IMDB_Puan)
+                IMDB Puanı
+                @* @Html.DisplayNameFor(model => model.IMDB_Puan) *@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Oyuncular)
+                Oyuncular
+                @* @Html.DisplayNameFor(model => model.Oyuncular) *@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.GosterimBaslangıc)
+                Sinema İlk Gösterim Tarihi
+                @*  @Html.DisplayNameFor(model => model.GosterimBaslangıc) *@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.GosterimBitis)
+                Sinema Son Gösterim Tarihi
+               @* @Html.DisplayNameFor(model => model.GosterimBitis) *@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Konu)
+                Film Konusu
+                @* @Html.DisplayNameFor(model => model.Konu)  *@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.YazarPuan)
+                Eleştri Yazarı Puanı
+                @* @Html.DisplayNameFor(model => model.YazarPuan) *@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Kategori)
+                Kategori
+                @* @Html.DisplayNameFor(model => model.Kategori) *@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Dil)
+                Dil
+               @* @Html.DisplayNameFor(model => model.Dil) *@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Yazar)
+                Eleştri Yazarı
+                @* @Html.DisplayNameFor(model => model.Yazar) *@
             </th>
             <th></th>
         </tr>
@@ -58,10 +71,16 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+              
                 @Html.DisplayFor(modelItem => item.FilmAd)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Yil)
+            </td>
+            <td>
+                @*  @Html.DisplayFor(modelItem => item.Afis) *@
+                <img src="@Url.Content(item.Afis)" class="d-block w-50" asp-append-version="true" />
+                <!--img olarak göstermek için eklendi-->
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Uzunluk)
@@ -81,6 +100,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Konu)
             </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.YazarPuan)
             </td>

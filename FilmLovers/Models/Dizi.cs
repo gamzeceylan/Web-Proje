@@ -13,14 +13,15 @@ namespace FilmLovers.Models
         public string Resim { get; set; }
 
         public int? Yil { get; set; }
-        public double YazarPuan { get; set; }
+          public double YazarPuan { get; set; }
         public string Oyuncular { get; set; }
 
         public int DilId { get; set; }
         public Dil Dil { get; set; }
 
+
         public int YazarId { get; set; }
         public Yazar Yazar { get; set; }
-
+   
     }
 }

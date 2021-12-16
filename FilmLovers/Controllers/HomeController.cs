@@ -1,5 +1,7 @@
-﻿using FilmLovers.Models;
+﻿using FilmLovers.Data;
+using FilmLovers.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -11,22 +13,25 @@ namespace FilmLovers.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ApplicationDbContext _context; // veri tabanı nesnesi
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ApplicationDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
+        // filmleri anasayfaya çekmek için
         public IActionResult Index()
         {
-            return View();
+            // veri tabanından dil ve kategoriler çağrılıyor
+            // dil ve kategori FK
+            var filmList = _context.Film
+                .Include(f => f.Dil)
+                .Include(f => f.Kategori);
+               
+            return View(filmList.ToList()); // html sayfasına yollladık
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
