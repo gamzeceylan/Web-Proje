@@ -1,79 +1,103 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - FilmLoverss</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
-    <link href="~/css/styles.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="description" content="Anime Template">
+    <meta name="keywords" content="Anime, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anime | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="~/css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="~/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/style.css" type="text/css">
 
 </head>
 <body>
-    <header>
-        <div class="bg-dark py-5">
-            <div class="container">
-                <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder ">
-                        <span class="text-danger">Film</span><span class="text-primary">Loverss</span>
-                    </h1>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
 
+    <!-- Header Section Begin -->
+    <!-- Header Section Begin -->
+    <!-- Normal Breadcrumb Begin -->
+    <section class="normal-breadcrumb set-bg" data-setbg="img/normal-breadcrumb.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="normal__breadcrumb__text">
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index"> <h2>FilmLoverss</h2></a></li>
+
+                        <p>Welcome to the official Anime blog.</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container px-4 px-lg-5">
-                <!--       <a class="navbar-brand" href="#!">Start Bootstrap</a>
-     -->
+    </section>
+    <!-- Header End -->
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+    <header class="header">
+        <div class="container">
+            <div class="row">
 
-                        <li class="navbar-brand dropdown">
-                            <a class="nav-link active dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Filmler</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">Vizyondakiler</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Film Eleştrileri</a></li>
+                <div class="col-lg-8">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+
+
+                                <li>
+                                    <a asp-area="" asp-controller="FilmSayfasi" asp-action="Index">Filmler<span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a asp-area="" asp-controller="VizyondakiFilmler" asp-action="Index">Vizyondakiler</a></li>
+                                        <li><a asp-area="" asp-controller="FilmSayfasi" asp-action="Index">Film Eleştrileri</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><a asp-area="" asp-controller="DiziSayfasi" asp-action="Index">Diziler</a></li>
+                                <li><a asp-area="" asp-controller="HaberSayfasi" asp-action="Index">Haberler</a></li>
+                                <li><a asp-area="" asp-controller="RoportajSayfasi" asp-action="Index">Röportajlar</a></li>
+                                <li>
+                                    <a asp-controller="Admin" asp-action="Index">Admin<span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a asp-area="" asp-controller="Yazars" asp-action="Index">Yazar</a></li>
+                                        <li><a asp-area="" asp-controller="Kategoris" asp-action="Index">Kategori</a></li>
+                                        <li><a asp-area="" asp-controller="Dils" asp-action="Index">Dil</a></li>
+                                        <li><a asp-area="" asp-controller="Films" asp-action="Index">Film</a></li>
+                                        <li><a asp-area="" asp-controller="Dizis" asp-action="Index">Dizi</a></li>
+                                        <li><a asp-area="" asp-controller="Habers" asp-action="Index">Haber</a></li>
+                                        <li><a asp-area="" asp-controller="Roportajs" asp-action="Index">Ropörtaj</a></li>
+
+
+
+                                    </ul>
+                                </li>
                             </ul>
-                        </li>
-
-
-                        <li class="navbar-brand"><a class="nav-link active" href="#!">Diziler</a></li>
-
-                        <li class="navbar-brand"><a class="nav-link active" href="#!">Haberler</a></li>
-                        <li class="navbar-brand"><a class="nav-link active" href="#!">Röportajlar</a></li>
-
-                        <!--Admin-->
-                        <li class="navbar-brand dropdown">
-                            <a class="nav-link active dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Yazars" asp-action="Index">Yazar</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Kategoris" asp-action="Index">Kategori</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Dils" asp-action="Index">Dil</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Films" asp-action="Index">Film</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Dizis" asp-action="Index">Dizi</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Habers" asp-action="Index">Haber</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Roportajs" asp-action="Index">Ropörtaj</a></li>
-
-
-                            </ul>
-                        </li>
-
-
-                    </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Üye Ol
-                           
-                        </button>
-                    </form>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">
+                        <a href="#" class="search-switch"><span class="icon_search"></span></a>
+                        <a asp-area="" asp-controller="GirisSayfasi" asp-action="Index" class="search-switch"><span class="icon_profile"></span></a>
+                    </div>
                 </div>
             </div>
-        </nav>
-
+            <div id="mobile-menu-wrap"></div>
+        </div>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -82,20 +106,65 @@
     </div>
     <br /><br />
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - CineDiary - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="page-up">
+            <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
         </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 text-center">
+
+
+                    <div class="normal__breadcrumb__text">
+                        <li><a asp-area="" asp-controller="Home" asp-action="Privacy"> <h2>FilmLoverss</h2></a></li>
+
+                    </div>
+
+
+                </div>
+                <div class="col-lg-6">
+
+                </div>
+                <div class="col-lg-3">
+                    <p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/js/scripts.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="icon_close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/player.js"></script>
+    <script src="~/js/jquery.nice-select.min.js"></script>
+    <script src="~/js/mixitup.min.js"></script>
+    <script src="~/js/jquery.slicknav.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/main.js"></script>
+
+
+
+
     @await RenderSectionAsync("Scripts", required: false)
 
 
     <!-- Footer -->
-   
     <!-- Footer -->
+
 
 
 </body>

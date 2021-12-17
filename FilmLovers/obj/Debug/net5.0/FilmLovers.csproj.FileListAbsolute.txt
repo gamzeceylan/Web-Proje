@@ -277,3 +277,12 @@ C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\View
 C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Yazars\Details.cshtml.g.cs
 C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Yazars\Edit.cshtml.g.cs
 C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Yazars\Index.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\FilmSayfasi\Index.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\DiziSayfasi\Index.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\HaberSayfasi\Index.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\RoportajSayfasi\Index.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\VizyondakiFilmler\Index.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\GirisSayfasi\Index.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Icerik\Index.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Shared\_LayoutAdmin.cshtml.g.cs

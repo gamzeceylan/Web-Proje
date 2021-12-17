@@ -3,18 +3,18 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<h1>Index</h1>
-
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table id ="datatablesSimple">
     <thead>
         <tr>
             <th>
                 Film Adı
-             @*   @Html.DisplayNameFor(model => model.FilmAd) *@
+                @*   @Html.DisplayNameFor(model => model.FilmAd) *@
             </th>
             <th>
                 Yayın Tarihi
@@ -42,7 +42,7 @@
             </th>
             <th>
                 Sinema Son Gösterim Tarihi
-               @* @Html.DisplayNameFor(model => model.GosterimBitis) *@
+                @* @Html.DisplayNameFor(model => model.GosterimBitis) *@
             </th>
             <th>
                 Film Konusu
@@ -58,7 +58,7 @@
             </th>
             <th>
                 Dil
-               @* @Html.DisplayNameFor(model => model.Dil) *@
+                @* @Html.DisplayNameFor(model => model.Dil) *@
             </th>
             <th>
                 Eleştri Yazarı
@@ -68,57 +68,58 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-              
-                @Html.DisplayFor(modelItem => item.FilmAd)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Yil)
-            </td>
-            <td>
-                @*  @Html.DisplayFor(modelItem => item.Afis) *@
-                <img src="@Url.Content(item.Afis)" class="d-block w-50" asp-append-version="true" />
-                <!--img olarak göstermek için eklendi-->
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Uzunluk)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IMDB_Puan)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Oyuncular)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GosterimBaslangıc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GosterimBitis)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Konu)
-            </td>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.YazarPuan)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Kategori.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Dil.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Yazar.Id)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+                    @Html.DisplayFor(modelItem => item.FilmAd)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Yil)
+                </td>
+                <td>
+                    @*  @Html.DisplayFor(modelItem => item.Afis) *@
+                    <img src="@Url.Content(item.Afis)" class="d-block w-50" asp-append-version="true" />
+                    <!--img olarak göstermek için eklendi-->
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Uzunluk)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IMDB_Puan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Oyuncular)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GosterimBaslangıc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GosterimBitis)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Konu)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.YazarPuan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kategori.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dil.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Yazar.Id)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
-</table>
+    </table>

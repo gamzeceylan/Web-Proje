@@ -53,9 +53,9 @@ namespace FilmLovers.Controllers
         // GET: Films/Create
         public IActionResult Create() //create sayfası
         {
-            ViewData["DilId"] = new SelectList(_context.Dil, "Id", "Id");
-            ViewData["KategoriId"] = new SelectList(_context.Kategori, "Id", "Id");
-            ViewData["YazarId"] = new SelectList(_context.Yazar, "Id", "Id");
+            ViewData["DilId"] = new SelectList(_context.Dil, "Id", "DilAd");
+            ViewData["KategoriId"] = new SelectList(_context.Kategori, "Id", "KategorAd");
+            ViewData["YazarId"] = new SelectList(_context.Yazar, "Id", "Ad");
             return View();
         }
 
