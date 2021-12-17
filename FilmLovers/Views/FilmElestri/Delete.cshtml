@@ -1,0 +1,48 @@
+﻿@model FilmLovers.Models.FilmElestri
+
+@{
+    ViewData["Title"] = "Delete";
+}
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h5>Sil</h5>
+<br />
+
+<h3>Silmek İstediğinizden Emin misiniz?</h3>
+<div>
+    <h4>FilmElestri</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Film)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Film.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Yazar)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Yazar.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Yazi)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Yazi)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.YazarPuan)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.YazarPuan)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

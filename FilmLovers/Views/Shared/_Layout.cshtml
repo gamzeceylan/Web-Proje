@@ -1,20 +1,17 @@
 ﻿<!DOCTYPE html>
-<html lang="zxx">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Anime Template">
-    <meta name="keywords" content="Anime, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Anime | Template</title>
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FilmLovers</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <title>FilmLoverss</title>
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet">
 
-    <!-- Css Styles -->
     <link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="~/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="~/css/elegant-icons.css" type="text/css">
@@ -62,7 +59,7 @@
                                 <li>
                                     <a asp-area="" asp-controller="FilmSayfasi" asp-action="Index">Filmler<span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
-                                        <li><a asp-area="" asp-controller="VizyondakiFilmler" asp-action="Index">Vizyondakiler</a></li>
+                                        <li><a asp-area="" asp-controller="VizyondakiFilmlerSayfasi" asp-action="Index">Vizyondakiler</a></li>
                                         <li><a asp-area="" asp-controller="FilmSayfasi" asp-action="Index">Film Eleştrileri</a></li>
 
                                     </ul>
@@ -70,21 +67,7 @@
                                 <li><a asp-area="" asp-controller="DiziSayfasi" asp-action="Index">Diziler</a></li>
                                 <li><a asp-area="" asp-controller="HaberSayfasi" asp-action="Index">Haberler</a></li>
                                 <li><a asp-area="" asp-controller="RoportajSayfasi" asp-action="Index">Röportajlar</a></li>
-                                <li>
-                                    <a asp-controller="Admin" asp-action="Index">Admin<span class="arrow_carrot-down"></span></a>
-                                    <ul class="dropdown">
-                                        <li><a asp-area="" asp-controller="Yazars" asp-action="Index">Yazar</a></li>
-                                        <li><a asp-area="" asp-controller="Kategoris" asp-action="Index">Kategori</a></li>
-                                        <li><a asp-area="" asp-controller="Dils" asp-action="Index">Dil</a></li>
-                                        <li><a asp-area="" asp-controller="Films" asp-action="Index">Film</a></li>
-                                        <li><a asp-area="" asp-controller="Dizis" asp-action="Index">Dizi</a></li>
-                                        <li><a asp-area="" asp-controller="Habers" asp-action="Index">Haber</a></li>
-                                        <li><a asp-area="" asp-controller="Roportajs" asp-action="Index">Ropörtaj</a></li>
-
-
-
-                                    </ul>
-                                </li>
+                                <li><a asp-controller="Admin" asp-action="Index">Admin</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -115,7 +98,7 @@
 
 
                     <div class="normal__breadcrumb__text">
-                        <li><a asp-area="" asp-controller="Home" asp-action="Privacy"> <h2>FilmLoverss</h2></a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index"> <h2>FilmLoverss</h2></a></li>
 
                     </div>
 
@@ -160,11 +143,6 @@
 
 
     @await RenderSectionAsync("Scripts", required: false)
-
-
-    <!-- Footer -->
-    <!-- Footer -->
-
 
 
 </body>

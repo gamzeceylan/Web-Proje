@@ -16,22 +16,31 @@ namespace FilmLovers.Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.12")
+                .HasAnnotation("ProductVersion", "5.0.8")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("FilmLovers.Models.Dil", b =>
+            modelBuilder.Entity("FilmLovers.Models.Admin", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("DilAd")
+                    b.Property<string>("Ad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("KullaniciAdi")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sifre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Soyad")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Dil");
+                    b.ToTable("Admin");
                 });
 
             modelBuilder.Entity("FilmLovers.Models.Dizi", b =>
@@ -41,8 +50,8 @@ namespace FilmLovers.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("DilId")
-                        .HasColumnType("int");
+                    b.Property<string>("Dil")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DiziAd")
                         .HasColumnType("nvarchar(max)");
@@ -56,22 +65,46 @@ namespace FilmLovers.Data.Migrations
                     b.Property<string>("Resim")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("YazarId")
+                    b.Property<int?>("SezonSayisi")
                         .HasColumnType("int");
 
-                    b.Property<double>("YazarPuan")
-                        .HasColumnType("float");
+                    b.Property<int?>("ToplamBolumSayisi")
+                        .HasColumnType("int");
 
                     b.Property<int?>("Yil")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DilId");
+                    b.ToTable("Dizi");
+                });
+
+            modelBuilder.Entity("FilmLovers.Models.DiziElestri", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("DiziId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("YazarId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("YazarPuan")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Yazi")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DiziId");
 
                     b.HasIndex("YazarId");
 
-                    b.ToTable("Dizi");
+                    b.ToTable("DiziElestri");
                 });
 
             modelBuilder.Entity("FilmLovers.Models.Film", b =>
@@ -84,8 +117,8 @@ namespace FilmLovers.Data.Migrations
                     b.Property<string>("Afis")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("DilId")
-                        .HasColumnType("int");
+                    b.Property<string>("Dil")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FilmAd")
                         .HasColumnType("nvarchar(max)");
@@ -111,24 +144,42 @@ namespace FilmLovers.Data.Migrations
                     b.Property<int?>("Uzunluk")
                         .HasColumnType("int");
 
+                    b.Property<int?>("Yil")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("KategoriId");
+
+                    b.ToTable("Film");
+                });
+
+            modelBuilder.Entity("FilmLovers.Models.FilmElestri", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("FilmId")
+                        .HasColumnType("int");
+
                     b.Property<int>("YazarId")
                         .HasColumnType("int");
 
                     b.Property<double>("YazarPuan")
                         .HasColumnType("float");
 
-                    b.Property<int?>("Yil")
-                        .HasColumnType("int");
+                    b.Property<string>("Yazi")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DilId");
-
-                    b.HasIndex("KategoriId");
+                    b.HasIndex("FilmId");
 
                     b.HasIndex("YazarId");
 
-                    b.ToTable("Film");
+                    b.ToTable("FilmElestri");
                 });
 
             modelBuilder.Entity("FilmLovers.Models.Haber", b =>
@@ -139,6 +190,9 @@ namespace FilmLovers.Data.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Baslik")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Icerik")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Resim")
@@ -169,6 +223,36 @@ namespace FilmLovers.Data.Migrations
                     b.ToTable("Kategori");
                 });
 
+            modelBuilder.Entity("FilmLovers.Models.Kullanici", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Ad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EmailAdres")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("KullaniciAdi")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sifre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SifreTekrar")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Soyad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Kullanici");
+                });
+
             modelBuilder.Entity("FilmLovers.Models.Roportaj", b =>
                 {
                     b.Property<int>("Id")
@@ -179,6 +263,9 @@ namespace FilmLovers.Data.Migrations
                     b.Property<string>("Baslik")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Konu")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Konusmaci")
                         .HasColumnType("nvarchar(max)");
 
@@ -187,6 +274,9 @@ namespace FilmLovers.Data.Migrations
 
                     b.Property<int>("YazarId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Yazi")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -203,6 +293,12 @@ namespace FilmLovers.Data.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Ad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("KullaniciAdi")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sifre")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Soyad")
@@ -413,11 +509,11 @@ namespace FilmLovers.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("FilmLovers.Models.Dizi", b =>
+            modelBuilder.Entity("FilmLovers.Models.DiziElestri", b =>
                 {
-                    b.HasOne("FilmLovers.Models.Dil", "Dil")
+                    b.HasOne("FilmLovers.Models.Dizi", "Dizi")
                         .WithMany()
-                        .HasForeignKey("DilId")
+                        .HasForeignKey("DiziId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -427,22 +523,27 @@ namespace FilmLovers.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Dil");
+                    b.Navigation("Dizi");
 
                     b.Navigation("Yazar");
                 });
 
             modelBuilder.Entity("FilmLovers.Models.Film", b =>
                 {
-                    b.HasOne("FilmLovers.Models.Dil", "Dil")
-                        .WithMany()
-                        .HasForeignKey("DilId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("FilmLovers.Models.Kategori", "Kategori")
                         .WithMany()
                         .HasForeignKey("KategoriId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Kategori");
+                });
+
+            modelBuilder.Entity("FilmLovers.Models.FilmElestri", b =>
+                {
+                    b.HasOne("FilmLovers.Models.Film", "Film")
+                        .WithMany()
+                        .HasForeignKey("FilmId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -452,9 +553,7 @@ namespace FilmLovers.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Dil");
-
-                    b.Navigation("Kategori");
+                    b.Navigation("Film");
 
                     b.Navigation("Yazar");
                 });

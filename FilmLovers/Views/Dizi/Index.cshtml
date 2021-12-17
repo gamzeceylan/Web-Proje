@@ -1,0 +1,91 @@
+﻿@model IEnumerable<FilmLovers.Models.Dizi>
+
+@{
+    ViewData["Title"] = "Index";
+}
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h1>Diziler</h1>
+
+<p>
+    <button type="button" class="btn btn-outline-danger">
+        <a asp-action="Create" class="text-dark">Create New</a>
+    </button>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Ad
+            </th>
+            <th>
+                Yıl
+            </th>
+            <th>
+                Konu
+            </th>
+            <th>
+                Oyuncular
+            </th>
+            <th>
+                Resim
+            </th>
+            <th>
+                Sezon Sayısı
+            </th>
+            <th>
+                Sezon Sayısı
+            </th>
+            <th>
+                Toplam Bölüm Sayısı
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiziAd)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Yil)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Konu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Oyuncular)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Resim)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dil)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SezonSayisi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ToplamBolumSayisi)
+                </td>
+                <td>
+                    <button type="button" class="btn btn-outline-danger">
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="text-dark">Edit</a>
+                    </button>
+
+                    <button type="button" class="btn btn-outline-danger">
+                        <a asp-action="Details" asp-route-id="@item.Id" class="text-dark">Details</a>
+                    </button>
+
+                    <button type="button" class="btn btn-outline-danger">
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="text-dark">Delete</a>
+                    </button>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

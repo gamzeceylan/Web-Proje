@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Dashboard - SB Admin</title>
+    <title>Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-    <link href="css/styles_.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+    <link href="~/css/styles_.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
 </head>
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="index.html">FilmLoverss</a>
+        <a class="navbar-brand ps-3" asp-controller="Home">FilmLoverss</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
         <!-- Navbar Search-->
@@ -43,48 +44,58 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <br>
-                        <div class="sb-sidenav-menu-heading">Core <hr></div>
-                        <!--     <a class="nav-link" asp-controller="Admins">
 
-                Admin
-            </a>
-    -->
-                        <a class="nav-link" asp-controller="Yazars">
+                        <br />
+                        <div class="sb-sidenav-menu-heading">Core <hr></div>
+                        <a class="nav-link" asp-controller="Admin">
+
+                            Admin
+                        </a>
+
+                        <a class="nav-link" asp-controller="Yazar">
 
                             Yazarlar
                         </a>
-                        <!--
-    <a class="nav-link" asp-controller="Kullanicilars">
 
-        Kullanıcılar
-    </a>
-        -->
+                        <a class="nav-link" asp-controller="Kullanici">
+
+                            Kullanıcılar
+                        </a>
+
                         <div class="sb-sidenav-menu-heading">Interface <hr></div>
-                        <a class="nav-link collapsed" asp-controller="Kategoris" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                        <a class="nav-link" asp-controller="Kategori">
 
                             Kategori
 
                         </a>
-                        <a class="nav-link" asp-controller="Films">
+                        <a class="nav-link" asp-controller="Film">
 
                             Film
                         </a>
-                        <a class="nav-link" asp-controller="Dizis">
+                        <a class="nav-link" asp-controller="Dizi">
 
                             Dizi
                         </a>
-                        <a class="nav-link" asp-controller="Habers">
+                        <a class="nav-link" asp-controller="FilmElestri">
+
+                            Film Eleştrisi
+                        </a>
+
+                        <a class="nav-link" asp-controller="DiziElestri">
+
+                            Dizi Eleştrisi
+                        </a>
+                        <a class="nav-link" asp-controller="Haber">
 
                             Haber
                         </a>
-                        <a class="nav-link" asp-controller="Roportajs">
+                        <a class="nav-link" asp-controller="Roportaj">
 
                             Röportaj
                         </a>
-                        <a class="nav-link" asp-controller="Dils">
 
-                            Dil
-                        </a>
+
+
 
                     </div>
                 </div>
@@ -94,16 +105,15 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">Dashboard</h1>
+            
                     <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item active">Dashboard</li>
                     </ol>
 
 
                     <div class="card mb-4">
                         <div class="card-header">
                             <i class="fas fa-table me-1"></i>
-                            DataTable Example
+
                         </div>
                         <div class="card-body">
 
@@ -135,6 +145,7 @@
     <script src="assets/demo/chart-bar-demo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
     <script src="js/datatables-simple-demo.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
 </body>
 </html>
 

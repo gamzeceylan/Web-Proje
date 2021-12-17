@@ -1,0 +1,110 @@
+﻿@model IEnumerable<FilmLovers.Models.Film>
+
+@{
+    ViewData["Title"] = "Index";
+}
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h1>Filmler</h1>
+
+<p>
+    <button type="button" class="btn btn-outline-danger">
+        <a asp-action="Create" class="text-dark">Create New</a>
+    </button>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Ad
+            </th>
+            <th>
+                Yıl
+            </th>
+            <th>
+                Uzunluk
+            </th>
+            <th>
+                IMDB Puanı
+            </th>
+            <th>
+                Oyuncular
+            </th>
+            <th>
+                Afiş
+            </th>
+            <th>
+                Dil
+            </th>
+            <th>
+               Gösterim Başlangıç Tarifi
+            </th>
+            <th>
+               Gösterim Bitiş Tarihi
+            </th>
+            <th>
+                Konu
+            </th>
+            <th>
+               Kategori
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FilmAd)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Yil)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Uzunluk)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IMDB_Puan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Oyuncular)
+                </td>
+                <td>
+                    <img src="@Url.Content(item.Afis)" class="d-block w-50" asp-append-version="true" />
+                    @* @Html.DisplayFor(modelItem => item.Afis) *@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dil)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GosterimBaslangıc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GosterimBitis)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Konu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kategori.Id)
+                </td>
+                <td>
+                    <button type="button" class="btn btn-outline-danger">
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="text-dark">Edit</a>
+                    </button>
+
+                    <button type="button" class="btn btn-outline-danger">
+                        <a asp-action="Details" asp-route-id="@item.Id" class="text-dark">Details</a>
+                    </button>
+
+                    <button type="button" class="btn btn-outline-danger">
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="text-dark">Delete</a>
+                    </button>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,72 @@
+﻿@model FilmLovers.Models.Dizi
+
+@{
+    ViewData["Title"] = "Delete";
+}
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h5>Sil</h5>
+<br />
+<h3>Silmek İstediğinizden Emin misiniz?</h3>
+<div>
+    <h4>Dizi</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DiziAd)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DiziAd)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Yil)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Yil)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Konu)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Konu)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Oyuncular)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Oyuncular)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Resim)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Resim)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dil)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dil)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SezonSayisi)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SezonSayisi)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ToplamBolumSayisi)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ToplamBolumSayisi)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

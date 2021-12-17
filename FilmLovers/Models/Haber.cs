@@ -10,9 +10,8 @@ namespace FilmLovers.Models
         public int Id { get; set; }
         public string Baslik { get; set; }
         public string Resim { get; set; }
-
-
         public int YazarId { get; set; }
         public Yazar Yazar { get; set; }
+        public string Icerik { get; set; }
     }
 }

@@ -1,0 +1,67 @@
+﻿@model IEnumerable<FilmLovers.Models.Haber>
+
+@{
+    ViewData["Title"] = "Index";
+}
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h1>Haberler</h1>
+
+<p>
+    <button type="button" class="btn btn-outline-danger">
+        <a asp-action="Create" class="text-dark">Create New</a>
+    </button>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Başlık
+            </th>
+            <th>
+                Resim
+            </th>
+            <th>
+                Yazar
+            </th>
+            <th>
+               Yazı
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Baslik)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Resim)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Yazar.Ad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Icerik)
+                </td>
+                <td>
+                    <button type="button" class="btn btn-outline-danger">
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="text-dark">Edit</a>
+                    </button>
+
+                    <button type="button" class="btn btn-outline-danger">
+                        <a asp-action="Details" asp-route-id="@item.Id" class="text-dark">Details</a>
+                    </button>
+
+                    <button type="button" class="btn btn-outline-danger">
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="text-dark">Delete</a>
+                    </button>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

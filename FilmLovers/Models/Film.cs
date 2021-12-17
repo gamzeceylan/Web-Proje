@@ -15,6 +15,7 @@ namespace FilmLovers.Models
         public double? IMDB_Puan { get; set; }
         public string Oyuncular { get; set; }
         public string Afis { get; set; }
+        public string Dil { get; set; }
 
         [DataType(DataType.Date)]
         public DateTime GosterimBaslangıc { get; set; }
@@ -23,23 +24,7 @@ namespace FilmLovers.Models
         public DateTime GosterimBitis { get; set; }
         public string Konu { get; set; }
 
-        public double YazarPuan { get; set; }
-
-        // kategori id -> pK 
-        // kategori -> fk
-        // isimler aşağıdıdaki gibi tanımlanacak
         public int KategoriId { get; set; } // kategori FK olarak
         public Kategori Kategori { get; set; }
-
-
-        // yorumlar ve oyuncular burada tutulmaz. onun için ayrı bir tablo oluşturulur ve ilgili id ler çağırlır. ??
-
-        public int DilId { get; set; }
-        public Dil Dil { get; set; }
-
-
-        public int YazarId { get; set; }
-        public Yazar Yazar { get; set; }
-
     }
 }
