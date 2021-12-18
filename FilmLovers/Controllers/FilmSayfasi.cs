@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FilmLovers.Data;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +10,21 @@ namespace FilmLovers.Controllers
 {
     public class FilmSayfasi : Controller
     {
+        private readonly ApplicationDbContext _context; // veri tabanı nesnesi
+
+        public FilmSayfasi(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            // film tablosu çağrılır
+            // fk larıyla birlikçe çağırıyoruz
+            var filmList = _context.Film
+                .Include(f => f.Kategori);
+
+            return View(filmList.ToList()); // html sayfasına yollladık
         }
     }
 }

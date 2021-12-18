@@ -15,7 +15,7 @@ namespace FilmLovers.Controllers
     public class FilmController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private readonly IWebHostEnvironment _hostingEnvironment;
+      
 
         public FilmController(ApplicationDbContext context)
         {

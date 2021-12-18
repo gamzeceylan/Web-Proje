@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<FilmLovers.Models.Film>
 @{
     ViewData["Title"] = "Index";
 }
@@ -22,9 +22,11 @@
                                 <div class="product__page__filter">
                                     <p>Kategoriler:</p>
                                     <select>
-                                        <option value="">A</option>
-                                        <option value="">B</option>
-                                        <option value="">C</option>
+                                        @foreach (var item in Model)
+                                        {
+                                            <option value="">@item.Kategori.KategorAd</option>
+                                        }
+        
                                     </select>
                                 </div>
                             </div>

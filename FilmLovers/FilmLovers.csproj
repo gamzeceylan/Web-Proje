@@ -18,8 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\images\film\" />
     <Folder Include="wwwroot\images\dizi\" />
+    <Folder Include="wwwroot\images\haber\" />
   </ItemGroup>
 
 </Project>
