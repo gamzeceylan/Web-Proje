@@ -7,7 +7,7 @@ using System.Text;
 
 namespace FilmLovers.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<Uye>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -26,6 +26,6 @@ namespace FilmLovers.Data
 
         public DbSet<Yazar> Yazar { get; set; }
         public DbSet<Admin> Admin { get; set; }
-        public DbSet<Kullanici> Kullanici { get; set; }
+    
     }
 }

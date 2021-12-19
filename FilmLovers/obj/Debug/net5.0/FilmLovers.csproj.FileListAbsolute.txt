@@ -402,11 +402,6 @@ C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\View
 C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Kategori\Details.cshtml.g.cs
 C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Kategori\Edit.cshtml.g.cs
 C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Kategori\Index.cshtml.g.cs
-C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Kullanici\Create.cshtml.g.cs
-C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Kullanici\Delete.cshtml.g.cs
-C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Kullanici\Details.cshtml.g.cs
-C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Kullanici\Edit.cshtml.g.cs
-C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Kullanici\Index.cshtml.g.cs
 C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\RoportajSayfasi\Index.cshtml.g.cs
 C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Roportaj\Create.cshtml.g.cs
 C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Roportaj\Delete.cshtml.g.cs
@@ -434,3 +429,13 @@ C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\FilmLovers
 C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\ref\FilmLovers.dll
 C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\FilmLovers.pdb
 C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\FilmLovers.genruntimeconfig.cache
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\UyeOlSayfasi\Index.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\Index.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs

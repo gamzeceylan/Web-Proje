@@ -7,6 +7,25 @@ namespace FilmLovers.Data.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.AddColumn<string>(
+                name: "Ad",
+                table: "AspNetUsers",
+                type: "nvarchar(max)",
+                nullable: true);
+
+            migrationBuilder.AddColumn<DateTime>(
+                name: "DogumTarihi",
+                table: "AspNetUsers",
+                type: "datetime2",
+                nullable: false,
+                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
+
+            migrationBuilder.AddColumn<string>(
+                name: "Soyad",
+                table: "AspNetUsers",
+                type: "nvarchar(max)",
+                nullable: true);
+
             migrationBuilder.CreateTable(
                 name: "Admin",
                 columns: table => new
@@ -29,12 +48,12 @@ namespace FilmLovers.Data.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    DiziAd = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DiziAd = table.Column<string>(type: "nvarchar(60)", maxLength: 60, nullable: false),
                     Yil = table.Column<int>(type: "int", nullable: true),
-                    Konu = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Oyuncular = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Resim = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Dil = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Konu = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Oyuncular = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Resim = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Dil = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SezonSayisi = table.Column<int>(type: "int", nullable: true),
                     ToplamBolumSayisi = table.Column<int>(type: "int", nullable: true)
                 },
@@ -49,29 +68,11 @@ namespace FilmLovers.Data.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    KategorAd = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    KategorAd = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Kategori", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Kullanici",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Ad = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Soyad = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    KullaniciAdi = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    EmailAdres = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Sifre = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    SifreTekrar = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Kullanici", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -80,10 +81,10 @@ namespace FilmLovers.Data.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Ad = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Soyad = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    KullaniciAdi = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Sifre = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Ad = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Soyad = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    KullaniciAdi = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Sifre = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -96,12 +97,12 @@ namespace FilmLovers.Data.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FilmAd = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FilmAd = table.Column<string>(type: "nvarchar(1)", maxLength: 1, nullable: false),
                     Yil = table.Column<int>(type: "int", nullable: true),
                     Uzunluk = table.Column<int>(type: "int", nullable: true),
                     IMDB_Puan = table.Column<double>(type: "float", nullable: true),
-                    Oyuncular = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Afis = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Oyuncular = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Afis = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Dil = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     GosterimBaslangıc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     GosterimBitis = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -127,7 +128,7 @@ namespace FilmLovers.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     DiziId = table.Column<int>(type: "int", nullable: false),
                     YazarId = table.Column<int>(type: "int", nullable: false),
-                    Yazi = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Yazi = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     YazarPuan = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
@@ -153,10 +154,10 @@ namespace FilmLovers.Data.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Baslik = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Resim = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Baslik = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Resim = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     YazarId = table.Column<int>(type: "int", nullable: false),
-                    Icerik = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Icerik = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -175,12 +176,12 @@ namespace FilmLovers.Data.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Baslik = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Konu = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Resim = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Konusmaci = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Baslik = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Konu = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Resim = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Konusmaci = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     YazarId = table.Column<int>(type: "int", nullable: false),
-                    Yazi = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Yazi = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -201,7 +202,7 @@ namespace FilmLovers.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FilmId = table.Column<int>(type: "int", nullable: false),
                     YazarId = table.Column<int>(type: "int", nullable: false),
-                    Yazi = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Yazi = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     YazarPuan = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
@@ -272,9 +273,6 @@ namespace FilmLovers.Data.Migrations
                 name: "Haber");
 
             migrationBuilder.DropTable(
-                name: "Kullanici");
-
-            migrationBuilder.DropTable(
                 name: "Roportaj");
 
             migrationBuilder.DropTable(
@@ -288,6 +286,18 @@ namespace FilmLovers.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "Kategori");
+
+            migrationBuilder.DropColumn(
+                name: "Ad",
+                table: "AspNetUsers");
+
+            migrationBuilder.DropColumn(
+                name: "DogumTarihi",
+                table: "AspNetUsers");
+
+            migrationBuilder.DropColumn(
+                name: "Soyad",
+                table: "AspNetUsers");
         }
     }
 }

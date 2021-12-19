@@ -66,15 +66,21 @@
                                 <li><a asp-area="" asp-controller="DiziSayfasi" asp-action="Index">Diziler</a></li>
                                 <li><a asp-area="" asp-controller="HaberSayfasi" asp-action="Index">Haberler</a></li>
                                 <li><a asp-area="" asp-controller="RoportajSayfasi" asp-action="Index">Röportajlar</a></li>
-                                <li><a asp-controller="Admin" asp-action="Index">Admin</a></li>
-                            </ul>
+
+                                <!-- <partial name="_LoginPartial" /> -->
+                                @if (SignInManager.IsSignedIn(User))
+                                {
+                                    <li><a asp-controller="Admin" asp-action="Index">Admin</a></li>
+                                }
+                                </ul>
                         </nav>
                     </div>
                 </div>
                 <div class="col-lg-2">
                     <div class="header__right">
+                        <partial name="_LoginPartial" />
                         <a href="#" class="search-switch"><span class="icon_search"></span></a>
-                        <a asp-area="" asp-controller="GirisSayfasi" asp-action="Index" class="search-switch"><span class="icon_profile"></span></a>
+                        <!--  <a asp-area="" asp-controller="GirisSayfasi" asp-action="Index" class="search-switch"><span class="icon_profile"></span></a> -->
                     </div>
                 </div>
             </div>
