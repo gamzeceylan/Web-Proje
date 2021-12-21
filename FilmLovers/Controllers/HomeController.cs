@@ -52,11 +52,37 @@ namespace FilmLovers.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-     //   [Authorize]
-     // anlamadım?
-        public IActionResult Admin()
+        [Authorize]
+        public IActionResult AdminSayfasi()
         {
             return View();
         }
+        public IActionResult FilmSayfasi()
+        {
+            return View();
+        }
+        public IActionResult DiziSayfasi()
+        {
+            return View();
+        }
+        public IActionResult HaberSayfasi()
+        {
+            return View();
+
+
+        }
+        public IActionResult IcerikSayfasi()
+        {
+            return View();
+
+
+        }
+        public IActionResult RoportajSayfasi()
+        {
+            return View();
+
+
+        }
+
     }
 }

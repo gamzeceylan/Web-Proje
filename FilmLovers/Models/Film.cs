@@ -11,7 +11,6 @@ namespace FilmLovers.Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(1,MinimumLength =50)]
         public string FilmAd { get; set; }
         public int? Yil { get; set; }
         public int? Uzunluk { get; set; }
