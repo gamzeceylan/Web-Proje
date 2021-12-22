@@ -33,7 +33,7 @@
     <!-- Header Section Begin -->
     <!-- Header Section Begin -->
     <!-- Normal Breadcrumb Begin -->
-    <section class="normal-breadcrumb set-bg" data-setbg="../img/titanic.png">
+    <section class="normal-breadcrumb set-bg" data-setbg="../../img/titanic.png">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -70,7 +70,7 @@
                                 {
                                     if (User.IsInRole("Admin")) @* ve admin is *@
                                     {
-                                        <li><a asp-controller="Admin" asp-action="Index">Admin</a></li>
+                                        <li><a asp-controller="Yazar" asp-action="Index">Admin</a></li>
                                     }
 
 
@@ -82,8 +82,6 @@
                 <div class="col-lg-2">
                     <div class="header__right">
                         <partial name="_LoginPartial" />
-
-                        <!--  <a asp-area="" asp-controller="GirisSayfasi" asp-action="Index" class="search-switch"><span class="icon_profile"></span></a> -->
                     </div>
                 </div>
             </div>

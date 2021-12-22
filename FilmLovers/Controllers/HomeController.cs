@@ -48,35 +48,5 @@ namespace FilmLovers.Controllers
         {
             return View();
         }
-
-   
-    
-        /*
-        [Authorize] // sadece login olanlar erişebilir
-        public IActionResult IcerikSayfasi()
-        {
-            
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var diziElestri = _context.DiziElestri
-                .Include(d => d.Dizi)
-                .Include(d => d.Yazar)
-                .FirstOrDefaultAsync(m => m.Id == id);
-
-            if (diziElestri == null)
-            {
-                return NotFound();
-            }
-
-            
-            return View();
-
-
-        }
-  
-    */
     }
 }
