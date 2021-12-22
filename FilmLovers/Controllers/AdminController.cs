@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FilmLovers.Data;
 using FilmLovers.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FilmLovers.Controllers
 {
@@ -20,6 +21,7 @@ namespace FilmLovers.Controllers
         }
 
         // GET: Admin
+        [Authorize(Roles = "Admin")] // adminse girer
         public async Task<IActionResult> Index()
         {
             return View(await _context.Admin.ToListAsync());

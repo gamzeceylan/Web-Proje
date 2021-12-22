@@ -33,7 +33,7 @@
     <!-- Header Section Begin -->
     <!-- Header Section Begin -->
     <!-- Normal Breadcrumb Begin -->
-    <section class="normal-breadcrumb set-bg" data-setbg="img/titanic.png">
+    <section class="normal-breadcrumb set-bg" data-setbg="../img/titanic.png">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -61,15 +61,20 @@
                                     <a asp-area="" asp-controller="Home" asp-action="Index">Filmler</a>
 
                                 </li>
-                                <li><a asp-area="" asp-controller="Home" asp-action="DiziSayfasi">Diziler</a></li>
-                                <li><a asp-area="" asp-controller="Home" asp-action="HaberSayfasi">Haberler</a></li>
-                                <li><a asp-area="" asp-controller="Home" asp-action="RoportajSayfasi">Röportajlar</a></li>
+                                <li><a asp-area="" asp-controller="DiziElestri" asp-action="DiziSayfasi">Diziler</a></li>
+                                <li><a asp-area="" asp-controller="Haber" asp-action="HaberSayfasi">Haberler</a></li>
+                                <li><a asp-area="" asp-controller="Roportaj" asp-action="RoportajSayfasi">Röportajlar</a></li>
 
                                 <!-- <partial name="_LoginPartial" /> -->
-                                @if (SignInManager.IsSignedIn(User))
+                                @if (User.Identity.IsAuthenticated) @* user giriş yaptıysa*@
                                 {
+                                    if (User.IsInRole("Admin")) @* ve admin is *@
+                                    {
+                                        <li><a asp-controller="Admin" asp-action="Index">Admin</a></li>
+                                    }
 
-                    <li><a asp-controller="Admin" asp-action="Index">Admin</a></li>}
+
+                                }
                             </ul>
                         </nav>
                     </div>

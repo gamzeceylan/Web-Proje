@@ -162,5 +162,16 @@ namespace FilmLovers.Controllers
         {
             return _context.FilmElestri.Any(e => e.Id == id);
         }
+
+        public IActionResult IcerikSayfasi(int id)
+        {
+            var filmElestri = _context.FilmElestri
+                 .Include(d => d.Film)
+                .Include(d => d.Yazar)
+                .Where(d => d.FilmId == id)
+                .Select(d => d);
+           
+            return View(filmElestri);
+        }
     }
 }

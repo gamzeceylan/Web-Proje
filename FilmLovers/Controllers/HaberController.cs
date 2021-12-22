@@ -175,5 +175,24 @@ namespace FilmLovers.Controllers
         {
             return _context.Haber.Any(e => e.Id == id);
         }
+
+        public IActionResult HaberSayfasi()
+        {
+
+            var haber = _context.Haber;
+       
+            return View(haber);
+ 
+        }
+
+        public IActionResult IcerikSayfasi(int id)
+        {
+            var haber = _context.Haber
+                .Include(d => d.Yazar)
+                .Where(d => d.Id == id)
+                .Select(d => d);
+            int k = id;
+            return View(haber);
+        }
     }
 }

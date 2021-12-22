@@ -1,0 +1,50 @@
+﻿@model IEnumerable<FilmLovers.Models.DiziElestri>
+@{ ViewData["Title"] = "Index"; }
+
+<section class="product-page spad">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <div class="product__page__content">
+                    <div class="product__page__title">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-6">
+                                <div class="section-title">
+                                    <h4>DİZİ ELEŞTRİLERİ</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        @foreach (var item in Model)
+                        {
+              
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" >
+                                        <img class="product__item__pic set-bg" src="..\@item.Dizi.Resim" alt="Alternate Text" />
+        
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a asp-action="IcerikSayfasi" asp-route-id="@item.Dizi.Id">@item.Dizi.DiziAd</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                        
+                    </div>
+                </div>
+    
+            </div>
+            <div class="col-lg-1"></div>
+        </div>
+    </div>
+</section>

@@ -48,7 +48,8 @@
                     @Html.DisplayFor(modelItem => item.Konu)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Resim)
+                    <img src="@Url.Content(item.Resim)" class="d-block w-50" asp-append-version="true" />
+                  
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Konusmaci)
@@ -57,6 +58,7 @@
                     @Html.DisplayFor(modelItem => item.Yazar.Ad)
                 </td>
                 <td>
+
                     @Html.DisplayFor(modelItem => item.Yazi)
                 </td>
                 <td>

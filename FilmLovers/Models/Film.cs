@@ -19,7 +19,7 @@ namespace FilmLovers.Models
         [Required]
         public string Oyuncular { get; set; }
 
-        [Required]
+ 
         public string Afis { get; set; }
         public string Dil { get; set; }
 

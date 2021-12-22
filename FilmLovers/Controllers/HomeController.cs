@@ -24,21 +24,12 @@ namespace FilmLovers.Controllers
         // filmleri anasayfaya çekmek için
         public IActionResult Index()
         {
-            /*    // veri tabanından dil ve kategoriler çağrılıyor
-                // dil ve kategori FK
-            // film tablosu çağrılır
-            // fk larıyla birlikçe çağırıyoruz
-                var filmList = _context.Film
-                    .Include(f => f.Dil)
-                    .Include(f => f.Kategori);
 
-                return View(filmList.ToList()); // html sayfasına yollladık
-    */    // film tablosu çağrılır
-          // fk larıyla birlikçe çağırıyoruz
             var filmList = _context.Film
                 .Include(f => f.Kategori);
-
-            return View(filmList.ToList()); // html sayfasına yollladık
+      
+                 return View(filmList); // html sayfasına yollladık
+        
         }
 
         public IActionResult Privacy()
@@ -52,37 +43,40 @@ namespace FilmLovers.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        [Authorize]
+      //  [Authorize(Roles ="Admin")]
         public IActionResult AdminSayfasi()
         {
             return View();
         }
-        public IActionResult FilmSayfasi()
-        {
-            return View();
-        }
-        public IActionResult DiziSayfasi()
-        {
-            return View();
-        }
-        public IActionResult HaberSayfasi()
-        {
-            return View();
 
-
-        }
+   
+    
+        /*
+        [Authorize] // sadece login olanlar erişebilir
         public IActionResult IcerikSayfasi()
         {
+            
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var diziElestri = _context.DiziElestri
+                .Include(d => d.Dizi)
+                .Include(d => d.Yazar)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (diziElestri == null)
+            {
+                return NotFound();
+            }
+
+            
             return View();
 
 
         }
-        public IActionResult RoportajSayfasi()
-        {
-            return View();
-
-
-        }
-
+  
+    */
     }
 }

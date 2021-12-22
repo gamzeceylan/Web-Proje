@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using FilmLovers.Data;
 using FilmLovers.Models;
 using System.IO;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FilmLovers.Controllers
 {
@@ -70,14 +71,14 @@ namespace FilmLovers.Controllers
                 var files = HttpContext.Request.Form.Files; // gözat diyip seçtiğimiz resim dosyası adı files. html sayfasında da files değişkeniyle bağlanır
 
                 string fileName = Guid.NewGuid().ToString(); // rastgele guid oluşturur bu dosya ismi oolur
-                var uploads = Path.Combine(webRootPath, @"images\film"); // oluşturulan guidin kaydolacağı yer
+                var uploads = Path.Combine(webRootPath, @"images\roportaj"); // oluşturulan guidin kaydolacağı yer
                 var extension = Path.GetExtension(files[0].FileName); // uzantı, seçilen dosya uzantısı
 
                 using (var fileStream = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
                 {
                     files[0].CopyTo(fileStream);
                 }
-                roportaj.Resim = @"images\film\" + fileName + extension; //
+                roportaj.Resim = @"images\roportaj\" + fileName + extension; //
 
                 _context.Add(roportaj);
                 await _context.SaveChangesAsync();
@@ -178,6 +179,24 @@ namespace FilmLovers.Controllers
         private bool RoportajExists(int id)
         {
             return _context.Roportaj.Any(e => e.Id == id);
+        }
+        public IActionResult RoportajSayfasi()
+        {
+            var roportaj = _context.Roportaj;
+            return View(roportaj);
+
+
+        }
+
+        [Authorize]
+        public IActionResult IcerikSayfasi(int id)
+        {
+            var roportaj = _context.Roportaj
+                .Include(d => d.Yazar)
+                .Where(d => d.Id == id)
+                .Select(d => d);
+            int k = id;
+            return View(roportaj);
         }
     }
 }

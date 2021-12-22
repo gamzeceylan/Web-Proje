@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FilmLovers.Data;
 using FilmLovers.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FilmLovers.Controllers
 {
@@ -161,6 +162,26 @@ namespace FilmLovers.Controllers
         private bool DiziElestriExists(int id)
         {
             return _context.DiziElestri.Any(e => e.Id == id);
+        }
+
+        public IActionResult DiziSayfasi()
+        {
+
+            var diziElestri = _context.DiziElestri
+                .Include(d => d.Dizi)
+                .Include(d=> d.Yazar);
+            return View(diziElestri);
+        }
+
+        public IActionResult IcerikSayfasi(int id)
+        {
+            var diziElestri = _context.DiziElestri
+                 .Include(d => d.Dizi)
+                .Include(d => d.Yazar)
+                .Where(d => d.DiziId == id)
+                .Select(d => d);
+            int k = id;
+            return View(diziElestri);
         }
     }
 }

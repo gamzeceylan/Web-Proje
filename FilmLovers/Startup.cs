@@ -39,8 +39,21 @@ namespace FilmLovers
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            services.AddDefaultIdentity<Uye>(options => options.SignIn.RequireConfirmedAccount = false)
+            services.AddIdentity<Uye,IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false)
+                .AddDefaultTokenProviders() // bunlarý ekledik
+                .AddDefaultUI()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.Configure<IdentityOptions>(options => {
+                options.Password.RequireDigit = true;
+                options.Password.RequiredLength = 4;
+                options.Password.RequiredUniqueChars = 0;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+            
+            });
+
             services.AddControllersWithViews();
         }
 

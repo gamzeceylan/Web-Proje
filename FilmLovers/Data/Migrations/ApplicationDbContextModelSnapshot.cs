@@ -68,7 +68,6 @@ namespace FilmLovers.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Resim")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("SezonSayisi")
@@ -122,7 +121,6 @@ namespace FilmLovers.Data.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Afis")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Dil")
@@ -209,7 +207,6 @@ namespace FilmLovers.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Resim")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("YazarId")
@@ -258,7 +255,6 @@ namespace FilmLovers.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Resim")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("YazarId")

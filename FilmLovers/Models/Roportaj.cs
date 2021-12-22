@@ -16,7 +16,7 @@ namespace FilmLovers.Models
         [Required(ErrorMessage = "Alan boş geçilemez")]
         public string Konu { get; set; }
 
-        [Required(ErrorMessage = "Alan boş geçilemez")]
+
         public string Resim { get; set; }
 
         [Required(ErrorMessage = "Alan boş geçilemez")]

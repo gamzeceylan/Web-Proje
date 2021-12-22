@@ -640,7 +640,10 @@ C:\Users\cceyl\Desktop\Yeni klasör\Web-Proje-main\FilmLovers\obj\Debug\net5.0\R
 C:\Users\cceyl\Desktop\Yeni klasör\Web-Proje-main\FilmLovers\obj\Debug\net5.0\Razor\Views\FilmElestri\Details.cshtml.g.cs
 C:\Users\cceyl\Desktop\Yeni klasör\Web-Proje-main\FilmLovers\obj\Debug\net5.0\Razor\Views\FilmElestri\Edit.cshtml.g.cs
 C:\Users\cceyl\Desktop\Yeni klasör\Web-Proje-main\FilmLovers\obj\Debug\net5.0\Razor\Views\FilmElestri\Index.cshtml.g.cs
-C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Home\DiziSayfasi.cshtml.g.cs
-C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Home\HaberSayfasi.cshtml.g.cs
-C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Home\IcerikSayfasi.cshtml.g.cs
-C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Home\RoportajSayfasi.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\DiziElestri\DiziSayfasi.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Haber\HaberSayfasi.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Roportaj\RoportajSayfasi.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\DiziElestri\IcerikSayfasi.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\FilmElestri\IcerikSayfasi.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Haber\IcerikSayfasi.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Roportaj\IcerikSayfasi.cshtml.g.cs

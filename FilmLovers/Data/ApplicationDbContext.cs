@@ -26,6 +26,7 @@ namespace FilmLovers.Data
 
         public DbSet<Yazar> Yazar { get; set; }
         public DbSet<Admin> Admin { get; set; }
-    
+      
+
     }
 }
