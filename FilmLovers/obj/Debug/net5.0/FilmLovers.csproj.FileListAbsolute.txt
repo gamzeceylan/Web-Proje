@@ -645,4 +645,10 @@ C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\View
 C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\FilmElestri\IcerikSayfasi.cshtml.g.cs
 C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Haber\IcerikSayfasi.cshtml.g.cs
 C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Roportaj\IcerikSayfasi.cshtml.g.cs
-C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\FilmLovers.csproj.GenerateResource.cache
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\bin\Debug\net5.0\en-US\FilmLovers.resources.dll
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\bin\Debug\net5.0\tr-TR\FilmLovers.resources.dll
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\FilmLovers.Resources.SharedResource.en-US.resources
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\FilmLovers.Resources.SharedResource.tr-TR.resources
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\en-US\FilmLovers.resources.dll
+C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\obj\Debug\net5.0\tr-TR\FilmLovers.resources.dll

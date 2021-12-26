@@ -1,6 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @inject SignInManager<Uye> SignInManager
 @inject UserManager<Uye> UserManager
+
 <!--eğer kullanıcı giriş yaptıysa-->
 <ul class="navbar-nav">
     @if (SignInManager.IsSignedIn(User))
@@ -8,18 +9,17 @@
 
 
 <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-    <button type="submit" class=" btn btn-link text-light">ÇIKIŞ</button>
-    
-</form> 
-}
-            
-else
-{
+    <button type="submit" class=" btn btn-link text-light">@SharedLocalizer["Cikis"]</button>
+
+</form>
+ }
+
+            else
+            {
 <li>
-    <a asp-area="Identity" asp-page="/Account/Register">Üye Ol</a>
+    <a asp-area="Identity" asp-page="/Account/Register">@SharedLocalizer["Uye ol"]</a>
 
 
-    <a asp-area="Identity" asp-page="/Account/Login">Giriş Yap</a>
-</li>
-    }
+    <a asp-area="Identity" asp-page="/Account/Login">@SharedLocalizer["Giris Yap"]</a>
+</li>}
 </ul>

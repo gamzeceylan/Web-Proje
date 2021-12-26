@@ -319,6 +319,14 @@
         "runtime": {
           "FilmLovers.dll": {}
         },
+        "resources": {
+          "en-US/FilmLovers.resources.dll": {
+            "locale": "en-US"
+          },
+          "tr-TR/FilmLovers.resources.dll": {
+            "locale": "tr-TR"
+          }
+        },
         "compile": {
           "FilmLovers.dll": {}
         }

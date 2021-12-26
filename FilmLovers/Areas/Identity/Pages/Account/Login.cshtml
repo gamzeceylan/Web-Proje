@@ -1,9 +1,7 @@
 ﻿@page
 @model LoginModel
 
-@{
-    ViewData["Title"] = "Log in";
-}
+@{ ViewData["Title"] = "Log in"; }
 
 
 <div class="row">
@@ -13,7 +11,7 @@
             <form id="account" method="post">
                 <br />
                 <h3 class="text-light">Giriş Yap</h3>
-                <hr class="alert-light"/>
+                <hr class="alert-light" />
                 <div asp-validation-summary="All" class="text-light"></div>
                 <div class="form-group">
                     <label asp-for="Input.Email" class="text-light"></label>
@@ -30,21 +28,22 @@
                         <label asp-for="Input.RememberMe" class="text-light">
                             <input asp-for="Input.RememberMe" />
                             @Html.DisplayNameFor(m => m.Input.RememberMe)
+                  
                         </label>
                     </div>
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Log in</button>
+                    <button type="submit" class="btn btn-primary">Giriş Yap</button>
                 </div>
                 <div class="form-group">
                     <p>
-                        <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                        <a id="forgot-password" asp-page="./ForgotPassword">Şifreni mi unuttun?</a>
                     </p>
                     <p>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Hesabın yoksa kayıt ol</a>
                     </p>
                     <p>
-                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
+                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">e-posta onayını yeniden gönder</a>
                     </p>
                 </div>
             </form>

@@ -27,14 +27,21 @@ using FilmLovers.Areas.Identity;
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\Areas\Identity\Pages\_ViewImports.cshtml"
+#line 4 "C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\Areas\Identity\Pages\_ViewImports.cshtml"
 using FilmLovers.Areas.Identity.Pages;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\Areas\Identity\Pages\_ViewImports.cshtml"
+#line 6 "C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\Areas\Identity\Pages\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Mvc.Localization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 9 "C:\Users\cceyl\Documents\GitHub\Web-Proje\FilmLovers\Areas\Identity\Pages\_ViewImports.cshtml"
 using FilmLovers.Models;
 
 #line default
@@ -48,7 +55,7 @@ using FilmLovers.Areas.Identity.Pages.Account;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"90623bb7201c73181ca79854f9fc1358f487c8f0", @"/Areas/Identity/Pages/Account/_ViewImports.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2419f613a4225cc36e73bfd0aedf54377db67daa", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ab632c553c7dbb634846de48dc680546c202bef8", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
     public class Areas_Identity_Pages_Account__ViewImports : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

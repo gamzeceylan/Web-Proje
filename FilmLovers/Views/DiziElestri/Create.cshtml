@@ -6,10 +6,10 @@
 @{
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
-<h5>Oluştur</h5>
+<h5>@SharedLocalizer["Olustur"]</h5>
 <br />
 
-<h4>DiziElestri</h4>
+<h4>@SharedLocalizer["Dizi Elestrileri"]</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -41,5 +41,5 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">@SharedLocalizer["geri"]</a>
 </div>

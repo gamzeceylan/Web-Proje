@@ -6,10 +6,10 @@
 @{
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
-<h5>Sil</h5>
+<h5>@SharedLocalizer["Sil"]</h5>
 <br />
 
-<h3>Silmek İstediğinizden Emin misiniz?</h3>
+<h3>@SharedLocalizer["emin misin"]</h3>
 <div>
     <h4>DiziElestri</h4>
     <hr />
@@ -43,6 +43,6 @@
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <a asp-action="Index">@SharedLocalizer["geri"]</a>
     </form>
 </div>

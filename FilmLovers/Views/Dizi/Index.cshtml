@@ -6,39 +6,39 @@
 @{
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
-<h1>Diziler</h1>
+<h1>@SharedLocalizer["Dizi"]</h1>
 
 <p>
     <button type="button" class="btn btn-outline-danger">
-        <a asp-action="Create" class="text-dark">Create New</a>
+        <a asp-action="Create" class="text-dark">@SharedLocalizer["Olustur"]</a>
     </button>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                Ad
+                @SharedLocalizer["Ad"]
             </th>
             <th>
-                Yıl
+                @SharedLocalizer["Yıl"]
             </th>
             <th>
-                Konu
+                @SharedLocalizer["Konu"]
             </th>
             <th>
-                Oyuncular
+                @SharedLocalizer["Oyuncular"]
             </th>
             <th>
-                Resim
+                @SharedLocalizer["Resim"]
             </th>
             <th>
-                Sezon Sayısı
+                @SharedLocalizer["Dil"]
             </th>
             <th>
-                Sezon Sayısı
+                @SharedLocalizer["Toplam bolum sayısı"]
             </th>
             <th>
-                Toplam Bölüm Sayısı
+                @SharedLocalizer["Toplam bolum sayısı"]
             </th>
             <th></th>
         </tr>
@@ -74,15 +74,15 @@
                 </td>
                 <td>
                     <button type="button" class="btn btn-outline-danger">
-                        <a asp-action="Edit" asp-route-id="@item.Id" class="text-dark">Edit</a>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="text-dark">@SharedLocalizer["Duzenle"]</a>
                     </button>
 
                     <button type="button" class="btn btn-outline-danger">
-                        <a asp-action="Details" asp-route-id="@item.Id" class="text-dark">Details</a>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="text-dark">@SharedLocalizer["Detaylar"]</a>
                     </button>
 
                     <button type="button" class="btn btn-outline-danger">
-                        <a asp-action="Delete" asp-route-id="@item.Id" class="text-dark">Delete</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="text-dark">@SharedLocalizer["Sil"]</a>
                     </button>
 
                 </td>

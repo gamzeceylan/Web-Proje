@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -30,10 +31,17 @@ namespace FilmLovers
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
+
             services.AddLocalization(options =>
             {
-                options.ResourcesPath = "Resources";
+                options.ResourcesPath = "Resources"; // tutulacak dosya adý
             });
+
+            services.AddMvc()
+                 .AddViewLocalization(Microsoft.AspNetCore.Mvc.Razor.LanguageViewLocationExpanderFormat.Suffix)
+                    .AddDataAnnotationsLocalization();// viewlerde dil desteði içim
+
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
@@ -46,7 +54,7 @@ namespace FilmLovers
 
             services.Configure<IdentityOptions>(options => {
                 options.Password.RequireDigit = true;
-                options.Password.RequiredLength = 4;
+                options.Password.RequiredLength = 2;
                 options.Password.RequiredUniqueChars = 0;
                 options.Password.RequireUppercase = false;
                 options.Password.RequireLowercase = false;
